@@ -39,7 +39,7 @@
   <p onclick="help()">Click for help</p>
   <p id="help">Help report</p>
 
-
+ 
   
 </div>
 <div class="container">
@@ -133,6 +133,7 @@
     </div>
  </div>
 
+ 
  <script>
   let id='id';
 
@@ -458,6 +459,22 @@ function help()
     Penalty.innerHTML="Penalty is "+penalty;
     
 }
+
+function newGame() {
+            
+            let mouseLocation = Math.floor(Math.random() * 23);
+            let catLocation = Math.floor(Math.random() * 23);
+
+            
+            document.getElementById("bushes").innerHTML = "Number of bushes checked is 0";
+            document.getElementById("penalty").innerHTML = "Penalty is 0";
+
+            
+            const ids = Array.from({ length: 23 }, (_, i) => "Bush" + i);
+            ids.forEach((id) => {
+                document.getElementById(id).src = "Bush.jpg";
+            });
+        }
 
 </script>
 </body>
