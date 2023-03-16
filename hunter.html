@@ -38,7 +38,7 @@
   <p id="Penalty">penalty is zero</p>
   <p onclick="help()">Click for help</p>
   <p id="help">Help report</p>
-
+  <button type="button" class="btn btn-secondary" onclick="newGame()">New Game</button>
  
   
 </div>
@@ -470,7 +470,7 @@ function newGame() {
             document.getElementById("penalty").innerHTML = "Penalty is 0";
 
             
-            const ids = Array.from({ length: 23 }, (_, i) => "Bush" + i);
+            const ids = Array.from({ length: 23 }, (_, i) => "bush" + i);
             ids.forEach((id) => {
                 document.getElementById(id).src = "Bush.jpg";
             });
